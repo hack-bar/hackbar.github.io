@@ -1,0 +1,35 @@
+	{{/* Will display the next upcoming event */}}
+	{{ $events := slice }}
+	{{ range where site.RegularPages "Type" "events" }}
+		{{ if (.Params.startdate | time.AsTime).After now }}
+			{{ $events = $events | append . }}
+		{{ end }}
+	{{ end }}
+	{{ $events = sort $events "Params.startdate" "asc" }}
+	{{ with (index ($events) 0) }}
+	<h1 id="event-title">Upcoming: {{ .Title }}</h1>
+	{{ .Content }}
+
+	<hr>
+	{{ end }}
+
+	{{/* List past events as buttons */}}
+	<h1>Past Editions</h1>
+	{{ $events := slice }}
+	{{ range where site.RegularPages "Type" "events" }}
+		{{ if (.Params.enddate | time.AsTime).Before now }}
+			{{ $events = $events | append . }}
+		{{ end }}
+	{{ end }}
+	{{ $events = sort $events "Params.startdate" "desc" }}
+
+	<div id="past-editions-flex-box">
+		{{ range $events }}
+		<a href="{{ .RelPermalink }}">
+			<div class="past-editions-entry">
+				{{ .Title }}<br>
+				{{ (.Params.startdate | time.AsTime) | time.Format "02.01" }}-{{ (.Params.enddate | time.AsTime) | time.Format "02.01.06" }}
+			</div>
+		</a>
+		{{ end }}
+	</div>

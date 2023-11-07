@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+<h1 id="event-title">{{ .Page.Title }}</h1>
+{{ .Content | safeHTML }}
+
+{{/* If the event has pictures, include a gallery */}}
+{{ $image := (.Page.Resources.ByType "image") }}
+{{ if gt ($image | len) 0}}
+<h1>Gallery</h1>
+<div id="gallery">
+	<!--https://github.com/christianspecht/code-examples/tree/master/hugo-gallery-example-->
+	{{ $image := (.Page.Resources.ByType "image") }}
+	{{ with $image }}
+		{{ range . }}
+		{{ $thumbname := printf "%s/%s%s%s" (path.Dir .RelPermalink) (path.BaseName .RelPermalink) "_thumbnail" (path.Ext .RelPermalink) }}
+		{{ $resized := .Fill "300x230 q66" | resources.Copy $thumbname }}
+		<a href="{{ .RelPermalink }}" data-lightbox="x"><img src="{{ $resized.RelPermalink }}"></a>
+		{{ end }}
+	{{ end }}
+	{{ end }}
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+
+{{ end }}
+

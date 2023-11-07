@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /static/
+
+Sitemap: {{ .Site.BaseURL}}/{{ site.Home.Sitemap.Filename }}

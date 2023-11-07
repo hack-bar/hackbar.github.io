@@ -1,0 +1,30 @@
+baseURL: "https://hackbar.ch/"
+languageCode: "en-us"
+
+title: "hackbar"
+
+params:
+  author: "bSePnAdMer@hackbar.ch"
+  twitter_handle: "@hackbar_ch"
+  site_description: "For Häckers, by Häckers"
+  site_keywords: "hacking,hacker,ctf,cyber,security,event,party,ccc,chaos,computer,club,schweiz"
+  footer_msg: "ALLES IST HACKBAR"
+
+
+disableKinds:
+  - taxonomy
+  - term
+  - RSS
+  - section
+
+menu:
+  header:
+  - name: Events
+    url: /#event-title
+    weight: 1
+  - name: Gallery
+    url: /gallery
+    weight: 2
+  - name: About
+    url: /about
+    weight: 3
