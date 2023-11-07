@@ -17,3 +17,5 @@ Will generate the folder `public`
 
 ## Adding a gallery
 Create a folder named `img` inside the event folder `content/events/YOUREVENT`. Hugo will then automatically add a gallery to the event and to the galleries page.
+
+## :D
