@@ -5,7 +5,7 @@ enddate: 2023-12-30
 ---
 
 # Intro 
-hackbar.ch is a free and open event, focused on (cyber-)security and the <3 for computers. Everybody is welcome.
+The hackbar.ch event is focused on (cyber-)security and the <3 for computers. Everybody is welcome.
 
 # What
 Initially, the idea was to meet up to watch live-streams of the yearly [Chaos Communication Congress (CCC)](https://en.wikipedia.org/wiki/Chaos_Communication_Congress) together.
