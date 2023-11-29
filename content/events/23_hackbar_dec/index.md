@@ -23,7 +23,7 @@ Bahnstrasse 44, 3008 Bern, Switzerland
 + 11:00 - Door Opening
 + 11:00 - 13:00 - CCC Streams
 + 13:00 - 15:00 - Lunch
-+ 15:00 - 16:00 - TBD
++ 15:00 - 16:00 - Talk: Sophus Siegenthaler - CTF 101
 + 16:00 - 20:00 - CCC Streams
 + 20:00 - 22:00 - Dinner 
 + 22:00 - 00:00 - More Streams
@@ -32,7 +32,7 @@ Bahnstrasse 44, 3008 Bern, Switzerland
 + 11:00 - Door Opening
 + 11:00 - 13:00 - CCC Streams
 + 13:00 - 15:00 - Lunch
-+ 15:00 - 16:00 - TBD
++ 15:00 - 16:00 - Workshop: Introduction into Lockpicking by [SPASS](https://lockpicking.ch)
 + 16:00 - 20:00 - CCC Streams
 + 20:00 - 22:00 - Dinner
 + 22:00 - 00:00 - More Streams
@@ -54,7 +54,7 @@ Bahnstrasse 44, 3008 Bern, Switzerland
 + 20:00 - 22:00 - Dinner
 + 22:00 - 00:00 - More Streams
 
--> The timetable is not yet done and more details will be added in due time.
+-> The timetable is not yet final. More details will be added in due time also changes might occur.
 
 # Ticket and Food Reservation
 Tickets are available at https://tickets.hackbar.ch
